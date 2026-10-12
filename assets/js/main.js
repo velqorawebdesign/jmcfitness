@@ -44,7 +44,7 @@
       sr.textContent = text + " ";
       var visual = document.createElement("span");
       visual.setAttribute("aria-hidden", "true");
-      line.style.setProperty("--line-delay", lineIndex * 120 + "ms");
+      line.style.setProperty("--line-delay", lineIndex * 300 + "ms");
       Array.prototype.forEach.call(text, function (ch) {
         var s = document.createElement("span");
         s.className = "char";
@@ -69,10 +69,10 @@
       var current = words[idx];
       current.classList.remove("is-active");
       current.classList.add("is-leaving");
-      setTimeout(function () { current.classList.remove("is-leaving"); }, 500);
+      setTimeout(function () { current.classList.remove("is-leaving"); }, 900);
       idx = (idx + 1) % words.length;
       words[idx].classList.add("is-active");
-    }, 2200);
+    }, 4000);
   });
 
   /* ---------- Scroll reveal ---------- */
