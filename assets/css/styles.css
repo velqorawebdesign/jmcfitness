@@ -10,6 +10,7 @@
 }
 
 :root {
+  color-scheme: dark;
   --bg: #0b0e1a;
   --surface: #141a2e;
   --surface-2: #1c2440;
@@ -79,7 +80,7 @@ a:hover { color: var(--gold-strong); }
 
 /* ---------- Header ---------- */
 .site-header {
-  position: sticky; top: 0; z-index: 50;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
   background: rgba(11, 14, 26, .92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
